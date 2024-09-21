@@ -83,13 +83,13 @@ $ sudo systemctl reload apache2
 **The new website is now active but the web root /var/www/projectlamp is still empty. Create an index.html file in this location so to test the virtual host work as expected.**
 
 ```powershell
-$ sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+sudo echo 'Hello LAMP from hostname' $(hostname) 'with public IP' 13.51.150.222 > /var/www/projectlamp/index.html
 ```
 
 **Open the website on a browser using the public IP address.**
 
 ```powershell
-http://184.72.210.143:80
+http://13.51.150.222:80
 ```
 
 ![image](images/site-url-ip.png)
